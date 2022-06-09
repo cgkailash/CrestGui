@@ -1,0 +1,135 @@
+
+<h6>SSE Settlement Performance & Status Details</h6>
+<div *ngIf="globalFunctionService.isEmpty(settlementFormData)" class="loader">
+    <span></span>
+</div>
+<div *ngIf="!globalFunctionService.isEmpty(settlementFormData)">
+<div class="row">
+    <div class="col-md-6">
+        <div class="dropdown-grp bottm-mrg">
+        <span>SSE Settlement Status:</span>
+        <kendo-dropdownlist [data]="settlementFormData.attributes.CSSS"  defaultItem="{{settlementFormData.attributes.CSSS[0]}}"> </kendo-dropdownlist>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="dropdown-grp bottm-mrg">
+        <span>Pending Update Status:</span>
+        <div class="input-box">{{settlementFormData.attributes.CPUS}}</div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="dropdown-grp">
+            <span>SSE Settlement Disabled:</span>
+            <div class="input-box">{{settlementFormData.attributes.DSDR}}</div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row bottm-mrg">
+    <div class="col-md-6">
+        <div class="flex-container">
+            <div class="dropdown-grp bottm-mrg flex-100">
+            <p class="section-title">Current Settlement Delimiter</p>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">Delimiter Type:</span>
+                <div class="input-box">{{settlementFormData.attributes.CDLY}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Sent Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SSTS}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">First Received Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SFRX}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Last Received Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SLRX}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">Processing Started Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SPST}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Finality Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SFTY}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">Deltas Applied Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SDTA}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Data Avialable Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SDAV}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">Balance Delay:</span>
+                <div class="input-box">{{settlementFormData.attributes.NBLD}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Data Available Delay:</span>
+                <div class="input-box">{{settlementFormData.attributes.NDAD}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="flex-container">
+            <div class="dropdown-grp bottm-mrg flex-100">
+            <p class="section-title">Previous Settlement Delimiter</p>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">Delimiter Type:</span>
+                <div class="input-box">{{settlementFormData.attributes.CPDL}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Sent Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SPVS}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">First Received Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SPFR}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Last Received Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SPLR}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">Processing Started Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SSPS}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Finality Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SPFY}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">Deltas Applied Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SPDA}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Data Avialable Ts:</span>
+                <div class="input-box">{{settlementFormData.attributes.SPDV}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                <span class="text-left-align">Balance Delay:</span>
+                <div class="input-box">{{settlementFormData.attributes.NPDB}}</div>
+            </div>
+            <div class="dropdown-grp bottm-mrg flex-50">
+                <span class="text-left-align">Data Available Delay:</span>
+                <div class="input-box">{{settlementFormData.attributes.NPDD}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bottom-btns-group">
+<button class="primary-button-color bottm-mrg btn-style" kendoButton>Retrieve</button>
+<button class="dark-button-color bottm-mrg btn-style" kendoButton>Update</button>
+<button class="dark-button-color bottm-mrg btn-style" kendoButton>Cancel</button>
+</div>
+</div>
+
+
+

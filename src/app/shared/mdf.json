@@ -1,0 +1,76 @@
+
+{
+    "QLOR" : [
+        {"userId" : "userId", 
+        "mandaroty": false, 
+        "type": "string"},
+        {"operatorId" : "operatorId", 
+        "mandaroty": false, 
+        "type": "string"},
+        {"password" : "password", 
+        "mandaroty": false, 
+        "type": "string"}
+    ],
+    "QLOS" : [
+        {"userId" : ""},
+        {"operatorId" : ""},
+        {"password" : ""}
+    ],
+    "TSSR": [
+        
+    ],
+    "TSSS": [
+        {"settlementStatus": ""},
+        {"pendingUpdateStatus": ""},
+        {"settlementDisabledReason": ""},
+        {"delimiterType": ""},
+        {"sentTimestamp": ""},
+        {"firstReceivedTimestamp": ""},
+        {"lastReceivedTimestamp": ""},
+        {"processingStartedTimestamp": ""},
+        {"finalityTimestamp": ""},
+        {"deltasAppliedTimestamp": ""},
+        {"dataAvailableTimestamp": ""},
+        {"balanceDelay": ""},
+        {"dataAvailableDelay": ""},
+        {"previousDelimiterType": ""},
+        {"previousSentTimestamp": ""},
+        {"previousFirstReceivedTimestamp": ""},
+        {"previousLastReceivedTimestamp": ""},
+        {"previousProcessingStartedTimestamp": ""},
+        {"previousFinalityTimestamp": ""},
+        {"previousDeltasAppliedTimestamp": ""},
+        {"previousDataAvailableTimestamp": ""},
+        {"previousBalanceDelay": ""},
+        {"previousDataAvailableDelay": ""},
+        {"updateTimestamp": ""},
+        {"CPUPin": ""}
+    ],
+    "KCAL": [
+        {"isin" : "isin", 
+        "mandaroty": false, 
+        "type": "string"},
+        {"corporateActionType" : "corporateActionType", 
+        "mandaroty": false, 
+        "type": "string"},
+        {"corporateActionNumber" : "corporateActionNumber", 
+        "mandaroty": false, 
+        "type": "string"},
+        {"directionIndicator" : "directionIndicator", 
+        "mandaroty": false, 
+        "type": "string"}
+    ],
+    "KCAM": [
+        {"listCount": ""},
+        {"isin": ""},
+        {"securityAbbreviation": ""},
+        {"corporateActionNumber": ""},
+        {"corporateActionDescription": ""},
+        {"corporateActionType": ""},
+        {"recordDate": ""},
+        {"paymentDate": ""},
+        {"corporateActionStatus": ""},
+        {"pagingIndicator": ""}
+    ]
+}
+

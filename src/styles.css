@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.sm-heading{
+    font-size: 24px !important;
+}
+.md-font-size{
+    font-size: 14px !important;
+}
+.sm-font-size{
+    font-size: 12px !important;
+}
+.xs-font-size{
+    font-size: 10px !important;
+}
+
+.primary-button-color{
+    background-color: #049A9A;
+    color: #fff;
+}
+.primary-button-color:hover{
+    background-color: #049A9A !important;
+    color: #fff;
+}
+.primary-button-color:active{
+    background-color: #68C2C2 !important;
+    color: #fff;
+}
+.primary-checkbox-color{
+    border-color: #049A9A !important;
+    color: white;
+    background-color: #049A9A !important;
+}
+.dark-button-color{
+    background-color: #424242;
+    color: #fff;
+}
+.dark-button-color:hover{
+    background-color: #424242;
+    color: #fff;
+}
+.dark-button-color:active{
+    background-color: #8F8F8F;
+    color: #fff;
+}
+
+.btn-style span{
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 12px !important;
+    font-weight: 400;
+    padding: 2px 15px;
+}
+
+.brk-line{
+    border-top: 1px solid #d6d4d4;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.flex-100{
+    flex: 100%;
+}
+.flex-50{
+    flex: 50%;
+}
+.flex-33{
+    flex: 33%;
+}
+.sm-padding-right{
+    padding-right: 10px;
+}
+.bottm-mrg{
+    margin-bottom: 6px;
+}
+.bottm-mrg-10{
+    margin-bottom: 10px;
+}
+.rght-mgr{
+    margin-right: 5px;
+}
+.section-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #424242;
+    border-bottom: 1px solid #000;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    width: 100%;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color: #049A9A !important;
+}
+
+span, kendo-label{
+    font-size: 10px;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+.dropdown-grp{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+/* loader css code  */
+.loader {
+    display: flex;
+    justify-content: center;
+    height: 480px;
+    align-items: center;
+}
+.loader span{
+border: 8px solid #f3f3f3;
+border-radius: 50%;
+border-top: 8px solid #049A9A;
+width: 60px;
+height: 60px;
+-webkit-animation: spin 2s linear infinite; /* Safari */
+animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

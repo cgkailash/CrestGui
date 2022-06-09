@@ -1,0 +1,333 @@
+<h6>Corporate Action Details</h6>
+<div class="retrive-data-sec">
+    <div class="dropdown-grp bottm-mrg">
+        <span class="text-left-align">ISIN</span>
+        <div class="input-box">{{globalVariableService.selectedISIN}}</div>
+    </div>
+    <div class="dropdown-grp bottm-mrg">
+        <span class="text-left-align">CMMISUR081025DISC0</span>
+        <div class="input-box"></div>
+    </div>
+    <div class="dropdown-grp bottm-mrg">
+        <span class="text-left-align">CORP ACT NO</span>
+        <div class="input-box"></div>
+    </div>
+    <button class="primary-button-color rght-mgr bottm-mrg btn-style" kendoButton>Retrieve</button>
+</div>
+<!-- <div class="brk-line"></div> -->
+<kendo-tabstrip>
+    <kendo-tabstrip-tab title="Generic" [selected]="true">
+        <ng-template kendoTabContent>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="dropdown-grp bottm-mrg description-box flex-100">
+                        <span class="text-left-align">DESCRIPTION</span>
+                        <div class="input-box bottm-mrg">MIMI MATURITY PAYMENT</div>
+                        <div class="input-box bottm-mrg"></div>
+                        <div class="input-box bottm-mrg"></div>
+                        <div class="input-box"></div>
+                    </div>
+                    <div class="corporate-left-sec">
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">TYPE</span>
+                            <kendo-dropdownlist [data]="type" defaultItem="{{type[0]}}"></kendo-dropdownlist>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">STATUS</span>
+                            <kendo-dropdownlist [data]="status" defaultItem="{{status[0]}}"></kendo-dropdownlist>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">EX DATE</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">SPECIAL EX DATE</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">RECORD DATE</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">PAYMENT DATE</span>
+                            <div class="input-box">08/10/2025</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">DISTRIBUTION TYPE</span>
+                            <kendo-dropdownlist [data]="distributionType" defaultItem="{{distributionType[0]}}"> </kendo-dropdownlist>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">ELECTION</span>
+                            <kendo-dropdownlist [data]="election" defaultItem="{{election[0]}}"> </kendo-dropdownlist>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="corporate-right-sec">
+                        <div class="dropdown-grp bottm-mrg check-box-div flex-100">
+                            <input type="checkbox" #notification kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification" text="FRACTION PAID BY ISSUER"></kendo-label>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">LINKED CA ISIN</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">ELECTION TRANS TYPE</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">LINKED CA NO</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg check-box-div flex-50">
+                            <input type="checkbox" #notification kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification" text="WITHDRAWABLE ELECT"></kendo-label>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg check-box-div flex-50">
+                            <input type="checkbox" #notification kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification" text="DENERATES CLAIMS"></kendo-label>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg check-box-div flex-50">
+                            <input type="checkbox" #notification kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification" text="DBV EXCLUSION"></kendo-label>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg check-box-div flex-50">
+                            <input type="checkbox" #notification kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification" text="TAX EXEMPT"></kendo-label>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">MANDATORY OR VOLUNTARY:</span>
+                            <kendo-dropdownlist [data]="mandatary" defaultItem="{{mandatary[0]}}"> </kendo-dropdownlist>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">TRANFORMATION DATE:</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">ACTIVATED DATE:</span>
+                            <div class="input-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab title="Generic 2" [disabled]="false">
+        <ng-template kendoTabContent>
+            <div class="row generic2">
+                <div class="col-md-8">
+                    <div class="corporate-left-sec">
+                        <div class="dropdown-grp bottm-mrg flex-33 sm-padding-right">
+                            <span class="text-left-align">RECEIVING AGENT</span>
+                            <kendo-dropdownlist [data]="receivingAgent" defaultItem="{{receivingAgent[0]}}"></kendo-dropdownlist>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33 sm-padding-right">
+                            <span class="text-left-align">RECEIVING AGENT</span>
+                            <div class="input-box">SHORT REG 1</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33">
+                            <span class="text-left-align">RECEIVING AGENT</span>
+                            <div class="input-box">ENABLED</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33 sm-padding-right">
+                            <span class="text-left-align">DIVIDEND TYPE</span>
+                            <kendo-dropdownlist [data]="dividendType" defaultItem="{{dividendType[0]}}"></kendo-dropdownlist>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33 sm-padding-right">
+                            <span class="text-left-align">GROSS OR NET</span>
+                            <kendo-dropdownlist [data]="grossOrNet" defaultItem="{{grossOrNet[0]}}"></kendo-dropdownlist>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33">
+                            <span class="text-left-align">STRIPPED ISIN</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg description-box flex-100">
+                            <span class="text-left-align">LINK TO WEB PAGE</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">START OF ELECTION PERIOD DATE</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">SRDIN ELIGIBLE IND</span>
+                            <kendo-dropdownlist [data]="SRDINEligibleInd" defaultItem="{{SRDINEligibleInd[0]}}"> </kendo-dropdownlist>
+                        </div>
+                    </div>
+                    <p class="section-title">INTERNATIONAL</p>
+                    <!-- <div class="brk-line"></div> -->
+                    <div class="corporate-left-sec">
+                        <div class="dropdown-grp bottm-mrg flex-33 sm-padding-right">
+                            <span class="text-left-align">CONFIRMATION STATUS</span>
+                            <kendo-dropdownlist [data]="confirmationStatus" defaultItem="{{confirmationStatus[0]}}"></kendo-dropdownlist>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33 sm-padding-right">
+                            <span class="text-left-align">CA REFERENCE</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33">
+                            <span class="text-left-align">LAST ACCEPT DATE</span>
+                            <div class="input-box">13/11/2020</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33 sm-padding-right">
+                            <span class="text-left-align">LAST ACCEPT TIME</span>
+                            <div class="input-box">09:00:00</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33 sm-padding-right">
+                            <span class="text-left-align">FOREIGN TAX OVERRIDE</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-33">
+                            <span class="text-left-align">DEFAULT OPTION NO</span>
+                            <div class="input-box"></div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg check-box-div">
+                            <input type="checkbox" #notification kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification" text="ALLOW TAX EXEMPT"></kendo-label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <p class="section-title">CPP</p>
+                    <div class="corporate-right-sec">
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">LAST OCP INSTR DATE</span>
+                            <div class="input-box">12/11/2020</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">LAST OCP INSTR TIME</span>
+                            <div class="input-box">10:00:00</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg  flex-100">
+                            <span class="text-left-align">LAST PARTICIPATION DATE</span>
+                            <div class="input-box">10/11/2020</div>
+                        </div>
+                    </div>
+
+                    <p class="section-title">MARKET DEADLINE</p>
+                    <div class="corporate-right-sec">
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">MARKET DEADLINE DATE</span>
+                            <div class="input-box">13/11/2020</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-100">
+                            <span class="text-left-align">MARKET DEADLINE TIME</span>
+                            <div class="input-box">18:00:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab title="Benefits">
+        <ng-template kendoTabContent>
+            <kendo-grid [data]="benefitsDataTable" [height]="400">
+                
+            
+                <!-- columns for mid-size devices -->
+                <kendo-grid-column field="caOption" title="CA OPTION">
+                </kendo-grid-column>
+                <!-- <kendo-grid-column media="(min-width: 450px)" field="optionStatus" title="OPTION STATUS">
+                </kendo-grid-column> -->
+                <kendo-grid-column title="OPTION STATUS" [width]="130">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <kendo-dropdownlist [data]="dataItem.optionStatus" defaultItem="{{dataItem.optionStatus[0]}}" style="font-size: 10px;"></kendo-dropdownlist>
+                    </ng-template>
+                </kendo-grid-column>
+                <kendo-grid-column field="tech" title="TECH">
+                </kendo-grid-column>
+                <!-- <kendo-grid-column media="(min-width: 450px)" field="type" title="TYPE">
+                </kendo-grid-column> -->
+                <kendo-grid-column title="TYPE" [width]="120">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <kendo-dropdownlist [data]="dataItem.type" defaultItem="{{dataItem.type[0]}}"></kendo-dropdownlist>
+                    </ng-template>
+                </kendo-grid-column>
+                <kendo-grid-column field="ccy" title="CCY">
+                </kendo-grid-column>
+                <kendo-grid-column field="ratio" title="RATIO">
+                </kendo-grid-column>
+                <kendo-grid-column field="percentage" title="PERCENTAGE">
+                </kendo-grid-column>
+                <kendo-grid-column field="benefitSecurity" title="BENEFIT SECURITY">
+                </kendo-grid-column>
+                <kendo-grid-column title="DB/CR" [width]="120">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <kendo-dropdownlist [data]="dataItem.dbcr"  defaultItem="{{dataItem.dbcr[0]}}"></kendo-dropdownlist>
+                    </ng-template>
+                </kendo-grid-column>
+                <kendo-grid-column field="ecsroAccount" title="ECSRO ACCOUNT">
+                </kendo-grid-column>
+                <kendo-grid-column field="label" title="LABEL">
+                </kendo-grid-column>
+            
+                <!-- additional columns on large devices -->
+                <!-- <kendo-grid-column media="(min-width: 680px)" field="UnitPrice" title="STRIP" [width]="80">
+                </kendo-grid-column>
+                <kendo-grid-column media="(min-width: 680px)" field="UnitsInStock" title="MSV" [width]="80">
+                </kendo-grid-column>
+                <kendo-grid-column media="(min-width: 680px)" title="ALLOW DIRECT" [width]="120">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <input type="checkbox" kendoCheckBox [checked]="dataItem.Discontinued" disabled />
+                    </ng-template>
+                </kendo-grid-column> -->
+            </kendo-grid>
+        </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab title="TakeOver">
+        <ng-template kendoTabContent>
+            <div class="row takeover-div">
+                <div class="col-md-8 offset-md-2">
+                    <div class="corporate-left-sec">
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">FIRST CLOSE DATE</span>
+                            <div class="input-box">02/03/1999</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">EXTENDED CLOSE DATE</span>
+                            <div class="input-box">02/04/1999</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">FINAL CLOSE DATE</span>
+                            <div class="input-box">02/05/1999</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">LAPSE DATE</span>
+                            <div class="input-box">02/06/1999</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">UNCONDITIONAL DATE</span>
+                            <div class="input-box">02/07/1999</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">WHOLLY UNCONDITIONAL DATE</span>
+                            <div class="input-box">02/08/1999</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50 sm-padding-right">
+                            <span class="text-left-align">COMPULSORY PURCHASE START DATE</span>
+                            <div class="input-box">02/09/1999</div>
+                        </div>
+                        <div class="dropdown-grp bottm-mrg flex-50">
+                            <span class="text-left-align">COMPULSORY PURCHASE END DATE</span>
+                            <div class="input-box">02/10/1999</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </kendo-tabstrip-tab>
+</kendo-tabstrip>
+
+<div class="bottom-align">
+<div class="bottom-btns-group">
+<button class="primary-button-color bottm-mrg btn-style" kendoButton>Auth</button>
+<button class="dark-button-color bottm-mrg btn-style" kendoButton>CA Option</button>
+<button class="dark-button-color bottm-mrg btn-style" kendoButton>Add</button>
+<button class="dark-button-color bottm-mrg btn-style" kendoButton>Delete</button>
+<button class="dark-button-color bottm-mrg btn-style" kendoButton>Del Claims</button>
+<button class="dark-button-color bottm-mrg btn-style" kendoButton>Update</button>
+<button class="dark-button-color bottm-mrg btn-style" (click)="sendState()" kendoButton>Lists</button>
+<button class="dark-button-color bottm-mrg btn-style" kendoButton>Cancel</button>
+</div>
+</div>

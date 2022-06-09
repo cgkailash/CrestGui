@@ -1,0 +1,74 @@
+<div class="form-container">
+<h6>Login</h6>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="username" class="xs-font-size">User ID</label>
+        <input [class.is-invalid]="loginForm.get('userId').invalid && loginForm.get('userId').touched" type="text" formControlName="userId" class="form-control xs-font-size" />
+        <div *ngIf="loginForm.get('userId').invalid && loginForm.get('userId').touched" class="invalid-feedback">
+            <small *ngIf="loginForm.get('userId').errors?.required" class="text-danger">User Id is required</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="xs-font-size">Operator ID</label>
+        <input [class.is-invalid]="loginForm.get('operatorRef').invalid && loginForm.get('operatorRef').touched" type="text" formControlName="operatorRef" class="form-control xs-font-size"  />
+        <div *ngIf="loginForm.get('operatorRef').invalid && loginForm.get('operatorRef').touched" class="invalid-feedback">
+            <small *ngIf="loginForm.get('operatorRef').errors?.required" class="text-danger">Operator Id is required</small>
+            <!-- <small *ngIf="loginForm.get('operatorRef').errors?.minlength" class="text-danger">Operator Id must be at least 6 charector</small> -->
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="xs-font-size">Operator Ref</label>
+        <input [class.is-invalid]="loginForm.get('participantId').invalid && loginForm.get('participantId').touched" type="text" formControlName="operatorRef" class="form-control xs-font-size"  />
+        <div *ngIf="loginForm.get('participantId').invalid && loginForm.get('participantId').touched" class="invalid-feedback">
+            <small *ngIf="loginForm.get('participantId').errors?.required" class="text-danger">Operator Id is required</small>
+            <!-- <small *ngIf="loginForm.get('participantId').errors?.minlength" class="text-danger">Operator Id must be at least 6 charector</small> -->
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="xs-font-size">Password</label>
+        <input [class.is-invalid]="loginForm.get('password').invalid && loginForm.get('password').touched" type="password" formControlName="password" class="form-control xs-font-size"  />
+        <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched" class="invalid-feedback">
+            <small *ngIf="loginForm.get('password').errors?.required" class="text-danger">User Id is required</small>
+            <!-- <small *ngIf="loginForm.get('password').errors?.minlength" class="text-danger">User Id must be at least 6 charector</small> -->
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="newPassword" class="xs-font-size">New Password</label>
+        <input [class.is-invalid]="loginForm.get('newPassword').invalid && loginForm.get('newPassword').touched" type="password" formControlName="newPassword" class="form-control xs-font-size"  />
+        <div *ngIf="loginForm.get('newPassword').invalid && loginForm.get('newPassword').touched" class="invalid-feedback">
+            <small *ngIf="loginForm.get('newPassword').errors?.required" class="text-danger">User Id is required</small>
+            <!-- <small *ngIf="loginForm.get('newPassword').errors?.minlength" class="text-danger">User Id must be at least 6 charector</small> -->
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="verifyPassword" class="xs-font-size">Verify Password</label>
+        <input [class.is-invalid]="loginForm.get('verifyPassword').invalid && loginForm.get('verifyPassword').touched" type="password" formControlName="verifyPassword" class="form-control xs-font-size"  />
+        <div *ngIf="loginForm.get('verifyPassword').invalid && loginForm.get('verifyPassword').touched" class="invalid-feedback">
+            <small *ngIf="loginForm.get('verifyPassword').errors?.required" class="text-danger">User Id is required</small>
+            <!-- <small *ngIf="loginForm.get('verifyPassword').errors?.minlength" class="text-danger">User Id must be at least 6 charector</small> -->
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="authoriserRef" class="xs-font-size">Authoriser Ref</label>
+        <input [class.is-invalid]="loginForm.get('authoriserRef').invalid && loginForm.get('authoriserRef').touched" type="password" formControlName="authoriserRef" class="form-control xs-font-size"  />
+        <div *ngIf="loginForm.get('authoriserRef').invalid && loginForm.get('authoriserRef').touched" class="invalid-feedback">
+            <small *ngIf="loginForm.get('authoriserRef').errors?.required" class="text-danger">User Id is required</small>
+            <!-- <small *ngIf="loginForm.get('authoriserRef').errors?.minlength" class="text-danger">User Id must be at least 6 charector</small> -->
+        </div>
+    </div>
+    <div class="form-group bottm-mrg-10">
+        <label for="authoriserPassword" class="xs-font-size">Authoriser Password</label>
+        <input [class.is-invalid]="loginForm.get('authoriserPassword').invalid && loginForm.get('authoriserPassword').touched" type="password" formControlName="authoriserPassword" class="form-control xs-font-size"  />
+        <div *ngIf="loginForm.get('authoriserPassword').invalid && loginForm.get('authoriserPassword').touched" class="invalid-feedback">
+            <small *ngIf="loginForm.get('authoriserPassword').errors?.required" class="text-danger">User Id is required</small>
+            <!-- <small *ngIf="loginForm.get('authoriserPassword').errors?.minlength" class="text-danger">User Id must be at least 6 charector</small> -->
+        </div>
+    </div>
+    <div class="form-group">
+        <!-- <button [disabled]="loading" class="btn login-btn-style primary-button-color btn-style">Login</button> -->
+        <button class="primary-button-color rght-mgr bottm-mrg btn-style" kendoButton>Login</button>
+        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        <!-- <a [routerLink]="['/register']" class="btn btn-link">Register</a> -->
+    </div>
+</form>
+</div>

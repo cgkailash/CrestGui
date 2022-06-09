@@ -1,0 +1,73 @@
+<h6>Security Select</h6>
+<div class="retrive-data-sec">
+  <div class="dropdown-grp bottm-mrg">
+      <span class="text-left-align">ABBREV</span>
+      <div class="input-box"></div>
+  </div>
+  <div class="dropdown-grp bottm-mrg">
+      <span class="text-left-align">CATEGORY</span>
+      <kendo-dropdownlist [data]="category" defaultItem="{{category[0]}}"></kendo-dropdownlist>
+  </div>
+  <button class="primary-button-color rght-mgr bottm-mrg btn-style" kendoButton>Retrieve</button>
+</div>
+<div class="brk-line"></div>
+<kendo-grid [data]="gridData" [height]="500" (cellClick)="cellClickHandler($event)" (add)="addHandler()" >
+  <!-- columns for mid-size devices -->
+  <kendo-grid-column
+    field="abbrev"
+    title="ABBREV"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    kendoGridAddCommand
+    field="isin"
+    title="ISIN"
+    class="isin-class"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="category"
+    title="CATEGORY"
+  >
+  </kendo-grid-column>
+
+  <!-- additional columns on large devices -->
+  <kendo-grid-column
+    field="strip"
+    title="STRIP"
+    [width]="80"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="msv"
+    title="MSV"
+    [width]="80"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    title="ALLOW"
+    [width]="120"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <input
+        type="checkbox"
+        kendoCheckBox
+        [checked]="dataItem.allow"
+        disabled
+      />
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column
+    title="ALLOW DIRECT"
+    [width]="120"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <input
+        type="checkbox"
+        kendoCheckBox
+        [checked]="dataItem.allowDirect"
+        disabled
+      />
+    </ng-template>
+  </kendo-grid-column>
+</kendo-grid>

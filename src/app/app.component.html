@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="container">
+<!-- <app-grid-table></app-grid-table> -->
+<!-- <div *ngIf="!globalVariableService.userLogin" class="login-section">
+<app-login></app-login>
+</div> -->
+<h1 class="welcome-heading" *ngIf="globalFunctionService.checkRouting()">WELCOME TO CREST</h1>
+
+<router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,58 @@
+<h6>Corporate Action List</h6>
+<div class="retrive-data-sec">
+  <div class="dropdown-grp bottm-mrg">
+      <span class="text-left-align">ISIN</span>
+      <div class="input-box">{{globalVariableService.selectedISIN}}</div>
+  </div>
+  <div class="dropdown-grp bottm-mrg">
+      <span class="text-left-align">Description</span>
+      <div class="input-box"></div>
+  </div>
+  <button class="primary-button-color rght-mgr bottm-mrg btn-style" (click)="getTableData()" kendoButton>Retrieve</button>
+</div>
+<div class="brk-line"></div>
+<!-- <div *ngIf="!displayTable" class="loader">
+  <span></span>
+</div> -->
+<kendo-grid [data]="gridData" [height]="500" (cellClick)="cellClickHandler($event)" (add)="addHandler()" >
+  <!-- columns for mid-size devices -->
+  <kendo-grid-column
+    field="type"
+    title="Type"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    kendoGridAddCommand
+    field="no"
+    title="No"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    kendoGridAddCommand
+    field="status"
+    title="Status"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="recordDate"
+    title="Record Date"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="paymentDate"
+    title="Payment Date"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="description"
+    title="Description"
+  >
+  </kendo-grid-column>
+</kendo-grid>
+
+<div class="bottom-btns-group">
+    <button class="primary-button-color bottm-mrg btn-style" kendoButton>Save</button>
+    <button class="dark-button-color bottm-mrg btn-style" (click)="sendState()" kendoButton>Lists</button>
+    <button class="dark-button-color bottm-mrg btn-style" kendoButton>OK</button>
+    <button class="dark-button-color bottm-mrg btn-style" kendoButton>Cancel</button>
+</div>
